@@ -2,7 +2,7 @@
 require 'functions.php';
 $connection = dbConnect();
 
-$result = $connection->query('SELECT * FROM `Maaltijden`');
+$result = $connection->query('SELECT * FROM `maaltijden`');
 
 ?>
 
@@ -23,15 +23,19 @@ $result = $connection->query('SELECT * FROM `Maaltijden`');
 
         <?php foreach($result as $row):?>
             <article class="menu-list_name">
-                <h2><?php echo $row['Naam']; ?></h2>
-                <figure class="menu-list_photo" style="background-image: url(images/<?php echo $row['Foto']; ?>)"></figure>
+                <h2><?php echo $row['naam'];?></h2>
+                <figure class="menu-list_photo" style="background-image: url(images/<?php echo $row['foto']; ?>)"></figure>
                 <header>
-                    <h3><?php echo $row['Ingrediënten']; ?></h3>
-                    <em><?php echo $row['Prijs']; ?></em>
+                    <h3><?php echo $row['ingredienten'];?></h3>
+                    <em>€<?php echo $row['prijs'];?></em>
                 </header>
-                <p><?php echo $row['Beschrijving']; ?></p>
+                <p><?php echo $row['beschrijving'];?></p>
+                <a href="detail.php?id=<?php echo $row['id'];?>">Meer info</a>
             </article>
             <?php endforeach; ?>
+        </section>
+        <section>
+            <a href="contact.php">Neem contact op!</a>
         </section>
     </div>
 </body>

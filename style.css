@@ -68,15 +68,123 @@ img{
         gap: 2rem;
     }
 }
-
 @media all and (min-width: 120rem){
     .menu-list{
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
 @media all and (min-width: 160rem){
     .menu-list{
         grid-template-columns: repeat(4, 1fr);
     }
 }*/
+
+/** Place details */
+
+.place-info {
+    background-color: var(--papaya);
+}
+
+.place-info header {
+    background-color: white;
+    padding: 2rem;
+}
+
+.place-info figure {
+    height: 50rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: inset 1px 1px 10px #333333;
+}
+
+.place-info p {
+    margin: 0 2rem 2rem 2rem;
+}
+
+.place-info a {
+    display: inline-block;
+    margin: 0 2rem 2rem 2rem;
+}
+
+.place-info figure em {
+    padding: 1rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px var(--prussian-blue);
+    background-color: var(--prussian-blue);
+    color: white;
+    font-weight: var(--font-weight-bold);
+    font-style: normal;
+    border: 2px solid white;
+}
+
+.place-info h2 {
+    color: var(--prussian-blue);
+    font-size: 4rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.place-info h3 {
+    color: var(--superiority-blue);
+    font-size: 3rem;
+}
+
+.place-info p {
+    font-size: 1.6rem;
+}
+
+.places-sidebar {
+    background-color: white;
+    padding: 2rem;
+    font-size: 2rem;
+    flex-grow: 1;
+}
+
+.places-sidebar h3 {
+    font-size: 2rem;
+    background-color:var(--superiority-blue);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.places-sidebar li {
+    font-size: 1.6rem;
+    color:var(--prussian-blue)
+}
+
+.places-sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Media queries */
+@media all and (min-width: 900px) {
+    .place-details section {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .place-details article {
+        width: 60%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .place-details article {
+        width: 70%;
+    }
+}
+
+@media all and (min-width: 1600px) {
+    .place-details article {
+        width: 80%;
+    }
+}
